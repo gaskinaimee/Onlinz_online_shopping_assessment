@@ -2,10 +2,22 @@
 def box_in_cm(height, width, depth):
     height_width_depth = []
 
+    box_in_cm = True
+    while True:
+        try:
+            for number in height_width_depth:
+                if number < 5:
+                    print("Sorry, the box must not be under 5cm's.")
+                    break
+                elif number > 100:
+                    print("Sorry, the box must not exceed 100cm's.")
+                else:
+                    height_width_depth.append(height)
+                    height_width_depth.append(width)
+                    height_width_depth.append(depth)
+        except ValueError:
+            print("Please enter a number.")
 
-
-
-    print(height_width_depth)
 
 #PUT IN LIST?
 
