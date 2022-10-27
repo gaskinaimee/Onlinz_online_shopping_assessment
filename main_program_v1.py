@@ -1,47 +1,49 @@
-#Functions
+
 
 #Variables
-customers_name = input("What is your name?").title()
+
+#Functions
+def statement_generator(statement, decoration):
+
+    sides = decoration * 3
+
+    statement = "{} {} {}".format(sides, statement, sides)
+
+    print(statement)
+
+
+    return ""
+
 
 #The box_in_cm function is a function made to calculate the altogether height, width and depth of the box.
 def box_in_cm():
-    height_width_depth = []
     box_in_cm = True
     while True:
         try:
-            height = int(input("What is the height of the box in cm's?"))
-            if height < 5:
-                print("Sorry, the height of the box must be more than 5 cm's. Currently, it is {}.".format(height))
-            else:
-                height_width_depth.append(height)
-                break
-        except ValueError:
-            print("Please enter a valid number.")
 
-    while True:
-        try:
+            height = int(input("Hello! What is the height of the box in cm's?"))
+
             width = int(input("What is the width of the box in cm's?"))
-            if width < 5:
-                print("Sorry, the width of the box must be more than 5 cm's. Currently, it is {}.".format(width))
-            else:
-                height_width_depth.append(width)
-                break
-        except ValueError:
-            print("Please enter a valid number.")
 
-    while True:
-        try:
             depth = int(input("What is the depth of the box in cm's?"))
-            if depth < 5:
-                print("Sorry, the depth of the box must be more than 5 cm's. Currently, it is {}.".format(depth))
-            else:
-                height_width_depth.append(depth)
-                break
-        except ValueError:
-            print("Please enter a valid number.")
 
-def box_volume():
-    box_volume = height * width * depth
+            height_width_depth = height + width + depth
+
+            if height_width_depth < 5:
+                print("The dimensions of the box must be more than 5. Currently, it is {}.".format(height_width_depth))
+            elif height_width_depth > 100:
+                print("The dimensions of the box must be under 100. Currently, it is {}.".format(height_width_depth))
+            else:
+                print("The dimensions of the box is {}.".format(height_width_depth))
+                break
+
+
+            height_width_depth = height + width + depth
+
+        except ValueError:
+            print("Please enter a number.")
+
+
 
 def base_rates():
     volume = input(question)
@@ -55,7 +57,13 @@ def base_rates():
     elif volume >= 100000:
         print("The base rate for your package is $15.00.")
 
-#Main program
-box_in_cm()
 
-box_volume()
+
+
+
+
+#Main program
+statement_generator("Welcome to Onlinz Online Shopping!", "*")
+customers_name = input("What is your name?").title()
+print("Hello, {}!")
+box_in_cm()
