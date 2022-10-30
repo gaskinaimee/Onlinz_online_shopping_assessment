@@ -1,6 +1,8 @@
 
 
 #Variables
+volume = height * width * depth
+print("The total volume of your box is {}.".format(volume))
 
 #Functions
 def statement_generator(statement, decoration):
@@ -21,11 +23,11 @@ def box_in_cm():
     while True:
         try:
 
-            height = int(input("Hello! What is the height of the box in cm's?"))
+            height = float(input("What is the height of the box in cm's?"))
 
-            width = int(input("What is the width of the box in cm's?"))
+            width = float(input("What is the width of the box in cm's?"))
 
-            depth = int(input("What is the depth of the box in cm's?"))
+            depth = float(input("What is the depth of the box in cm's?"))
 
             height_width_depth = height + width + depth
 
@@ -34,15 +36,15 @@ def box_in_cm():
             elif height_width_depth > 100:
                 print("The dimensions of the box must be under 100. Currently, it is {}.".format(height_width_depth))
             else:
-                print("The dimensions of the box is {}.".format(height_width_depth))
                 break
 
 
             height_width_depth = height + width + depth
 
+
+
         except ValueError:
             print("Please enter a number.")
-
 
 
 def base_rates():
@@ -58,12 +60,10 @@ def base_rates():
         print("The base rate for your package is $15.00.")
 
 
-
-
-
-
 #Main program
 statement_generator("Welcome to Onlinz Online Shopping!", "*")
 customers_name = input("What is your name?").title()
-print("Hello, {}!")
+print("Hello, {}!".format(customers_name))
 box_in_cm()
+
+
