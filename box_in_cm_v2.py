@@ -8,8 +8,6 @@ def box_in_cm():
 
             width = int(input("What is the width of the box in cm's?"))
 
-            depth = int(input("What is the depth of the box in cm's?"))
-
             height_width_depth = height + width + depth
 
             if height_width_depth < 5:
@@ -26,4 +24,4 @@ def box_in_cm():
         except ValueError:
             print("Please enter a number.")
 
-box_in_cm()
+
