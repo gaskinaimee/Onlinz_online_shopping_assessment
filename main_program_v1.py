@@ -1,8 +1,5 @@
 
 
-#Variables
-volume = height * width * depth
-print("The total volume of your box is {}.".format(volume))
 
 #Functions
 def statement_generator(statement, decoration):
@@ -45,10 +42,10 @@ def box_in_cm():
 
         except ValueError:
             print("Please enter a number.")
-
+    return height_width_depth
 
 def base_rates():
-    volume = input(question)
+
 
     if volume <= 6000:
         print("The bass rate for your package is $8.00.")
@@ -64,6 +61,6 @@ def base_rates():
 statement_generator("Welcome to Onlinz Online Shopping!", "*")
 customers_name = input("What is your name?").title()
 print("Hello, {}!".format(customers_name))
-box_in_cm()
+var1 = box_in_cm()
 
 
